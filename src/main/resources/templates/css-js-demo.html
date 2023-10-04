@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>CSS and JS Demo</title>
+    <link th:href="@{/css/main.css}" rel="stylesheet">
+    <script type="text/javascript" th:src="@{/js/actions.js}"></script>
+</head>
+
+<body>
+    <h2>CSS and JS</h2>
+    <p>
+        This is text on witch we apply <strong>very special</strong> style.
+    </p>
+    <button type="button" th:onclick="demo()">Show Alert</button>
+</body>
+
+</html>

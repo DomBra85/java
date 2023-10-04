@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Edit Employee</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <h2>Edit Employee</h2>
+        <form th:action="@{/employees/edit}" th:object="${employee}" method="post">
+            <div class="form-group">
+                <label>ID</label>
+                <input type="text" th:field="*{id}" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" th:field="*{firstName}" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>Surname</label>
+                <input type="text" th:field="*{lastName}" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="text" th:field="*{email}" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>Position</label>
+                <input type="text" th:field="*{position}" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
